@@ -1,7 +1,9 @@
 # API Rest Basic
 
 ### 🖥 Setup 
-- Remember to change the environment variables before running.
+Before running the API, make sure to follow these steps:
+
+Update the environment variables in a .env file with your specific configuration:
 ```
 PORT="your port"
 MONGO_CNN="your connection"

@@ -26,4 +26,4 @@ The API has the following endpoint:
     * PUT `/users/:id`: Update an existing user by their ID.
     * DELETE `/users/:id`: Delete an existing user by their ID.
 
-### 🛠 [Stack Used](https://github.com/VanegasYW/APIRest-Basic/blob/master/techstack.md)
+## 🛠 [Stack Used](https://github.com/VanegasYW/APIRest-Basic/blob/master/techstack.md)

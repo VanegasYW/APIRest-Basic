@@ -16,7 +16,14 @@ const getUsersLimiter = rateLimit({
 router.get("/", getUsersLimiter, getUsers)
 router.get("/:id",getUserById)
 router.post("/",  postUser)
-router.put("/:id", putUser)
+// Configure rate limiter: maximum of 100 requests per 15 minutes
+const putUserLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100 // limit each IP to 100 requests per windowMs
+});
+
+// Apply rate limiter to putUser route
+router.put("/:id", putUserLimiter, putUser)
 
 // Configure rate limiter: maximum of 100 requests per 15 minutes
 const deleteUserLimiter = rateLimit({

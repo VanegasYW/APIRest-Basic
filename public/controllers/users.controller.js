@@ -46,11 +46,15 @@ const putUser = async (req, res) => {
 
     const { nombre, correo, clave, estado } = req.body // Destructuring the request body to get the user's updated name, email, password, and status
 
+    if (typeof nombre !== 'string' || typeof correo !== 'string' || typeof clave !== 'string' || typeof estado !== 'string') {
+        return res.status(400).json({ success: false, message: 'Invalid input data' });
+    }
+
     const salt = bcryptjs.genSaltSync() 
 
     const hashClave = bcryptjs.hashSync(clave, salt) 
 
-    const user = await User.findByIdAndUpdate(id, { nombre, correo, clave: hashClave, estado }) // Updating a User object with the destructured data
+    const user = await User.findByIdAndUpdate(id, { $set: { nombre, correo, clave: hashClave, estado } }) // Updating a User object with the destructured data
 
     res.status(200).json({ 
         success: true,

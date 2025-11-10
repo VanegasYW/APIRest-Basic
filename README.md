@@ -17,7 +17,7 @@ npm i
 npm start
 ```
 
-### 🌐 Endpoint *(No Authentication Required)*
+### 🌐 Endpoints *(No Authentication Required)*
 
 The API provides the following endpoints:
 

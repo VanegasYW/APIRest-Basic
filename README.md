@@ -17,13 +17,16 @@ npm i
 npm start
 ```
 
-### 🌐 Endpoint
-The API has the following endpoint:
+### 🌐 Endpoint *(No Authentication Required)*
 
-* GET `/users`: Get a list of all users.
-    * GET `/users/:id`: Retrieve a specific user by their ID.
-    * POST `/users:` Create a new user.
-    * PUT `/users/:id`: Update an existing user by their ID.
-    * DELETE `/users/:id`: Delete an existing user by their ID.
+The API provides the following endpoints:
+
+| Method | Endpoint       | Description                            |
+|:-------|:----------------|:----------------------------------------|
+| `GET`  | `/users`        | Get a list of all users                 |
+| `GET`  | `/users/:id`    | Retrieve a specific user by their ID    |
+| `POST` | `/users`        | Create a new user                       |
+| `PUT`  | `/users/:id`    | Update an existing user by their ID     |
+| `DELETE` | `/users/:id`  | Delete an existing user by their ID     |
 
 ## 🛠 [Stack Used](https://github.com/VanegasYW/APIRest-Basic/blob/master/techstack.md)
